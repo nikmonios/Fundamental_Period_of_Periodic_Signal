@@ -1,4 +1,5 @@
 function Tperiod = fundamental_period(X)
+
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% X is an array that the samples of the signal are stored       %
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -12,7 +13,7 @@ function Tperiod = fundamental_period(X)
 	
     trainSize = floor(log(Xlength) / log(2)); % find the max number from 0 to Xlength that is a number of 2
 	
-    TwoPower = (2^trainSize) + 1; % this number is the length of the data set on which we will apply the algorithm, and it is a power of 2
+    TwoPower = 2^trainSize; % this number is the length of the data set on which we will apply the algorithm, and it is a power of 2
     
     XX = X(1 : TwoPower); % so our training set is from the first element of the array untill TwoPower
     
